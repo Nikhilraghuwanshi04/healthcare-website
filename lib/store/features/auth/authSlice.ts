@@ -27,7 +27,7 @@ const initialState: AuthState = {
     isInitialized: false,
 }
 
-const API_URL = '/api/auth'
+const API_URL = process.env.NEXT_PUBLIC_API_URL
 
 // Async Thunk for Login
 export const loginUser = createAsyncThunk(
