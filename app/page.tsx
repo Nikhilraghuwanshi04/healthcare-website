@@ -1,5 +1,6 @@
 'use client'
 
+import Footer from '@/components/Footer'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
 import { cn } from '@/lib/utils'
@@ -177,6 +178,9 @@ export default function Home() {
                     </div>
                 </div>
             </section>
+
+            {/* Footer */}
+            <Footer />
         </main>
     )
 }

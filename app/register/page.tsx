@@ -57,13 +57,13 @@ function RegisterForm() {
             {/* Content Container */}
             <div className="relative z-10 w-full flex flex-col items-center">
                 {/* Logo */}
-                <div className="mb-8">
+                <div className="mb-8 w-full px-4 flex justify-center">
                     <Image
                         src="/assets/logo.png"
                         alt="Logo"
                         width={500}
                         height={140}
-                        className="w-auto h-40 object-contain"
+                        className="w-auto h-24 sm:h-32 md:h-40 object-contain"
                         priority
                     />
                 </div>

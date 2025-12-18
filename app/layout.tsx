@@ -1,13 +1,19 @@
-import type { Metadata } from 'next'
-import './globals.css'
+import type { Metadata, Viewport } from 'next';
+import './globals.css';
 
 export const metadata: Metadata = {
   title: 'Physiotherapy',
-  description: 'Physiotherapy',
+  description: 'Revitalize Your Health, Rediscover Movement',
   generator: 'v0.dev',
+  manifest: "/manifest.json",
 }
 
-import StoreProvider from '@/lib/store/StoreProvider'
+export const viewport: Viewport = {
+  themeColor: "#38BDF8",
+};
+
+import ServerWakeup from '@/components/ServerWakeup';
+import StoreProvider from '@/lib/store/StoreProvider';
 
 export default function RootLayout({
   children,
@@ -17,7 +23,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <StoreProvider>{children}</StoreProvider>
+        <StoreProvider>
+          <ServerWakeup />
+          {children}
+        </StoreProvider>
       </body>
     </html>
   )
